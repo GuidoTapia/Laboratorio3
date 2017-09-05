@@ -11,7 +11,7 @@ int main()
     int orden[]={0,1,2,3,4,5,6,7,8,9};// orden resultante despues del algoritmo de ordenamiento que indica el indice del pais en cada posicion
     bool flag=false;// booleano cuyo valor true significara que Perú tiene posibilidades de clasificar al mundial
     int contador=0;// contador que almacenara el total de cantidad de posibles resultados en los que Perú puede clasificar al mundial
-    string paises[]={"Colombia","Brasil","Paraguay","Uruguay","Chile","Bolivia","Peru","Ecuador","Argentina","Venezuela"};
+    //string paises[]={"Colombia","Brasil","Paraguay","Uruguay","Chile","Bolivia","Peru","Ecuador","Argentina","Venezuela"};
     for(int a=0;a<3;a++){//primer partido con tres posibilidades gana A, gana B o empatan
         if (a==0){
             puntos[0]+=3;
@@ -98,53 +98,54 @@ int main()
                         }
                         if (flag==true){ //se imprimen los resultados de los 5 partidos jugados
                             if (a==0){
-                                cout<<paises[0]<<" le gana a "<<paises[1]<<endl;
+                                cout<<"Colombia"<<" le gana a "<<"Brasil"<<endl;
                             }
                             else if (a==1){
-                                cout<<paises[0]<<" y "<<paises[1]<<" empatan"<<endl;
+                                cout<<"Colombia"<<" y "<<"Brasil"<<" empatan"<<endl;
                             }
                             else{
-                                cout<<paises[1]<<" le gana a "<<paises[0]<<endl;
+                                cout<<"Brasil"<<" le gana a "<<"Colombia"<<endl;
                             }
                             if (b==0){
-                                cout<<paises[2]<<" le gana a "<<paises[3]<<endl;
+                                cout<<"Paraguay"<<" le gana a "<<"Uruguay"<<endl;
                             }
                             else if (b==1){
-                                cout<<paises[2]<<" y "<<paises[3]<<" empatan"<<endl;
+                                cout<<"Paraguay"<<" y "<<"Uruguay"<<" empatan"<<endl;
                             }
                             else{
-                                cout<<paises[3]<<" le gana a "<<paises[2]<<endl;
+                                cout<<"Uruguay"<<" le gana a "<<"Paraguay"<<endl;
                             }
                             if (c==0){
-                                cout<<paises[4]<<" le gana a "<<paises[5]<<endl;
+                                cout<<"Chile"<<" le gana a "<<"Bolivia"<<endl;
                             }
                             else if (c==1){
-                                cout<<paises[4]<<" y "<<paises[5]<<" empatan"<<endl;
+                                cout<<"Chile"<<" y "<<"Bolivia"<<" empatan"<<endl;
                             }
                             else{
-                                cout<<paises[5]<<" le gana a "<<paises[4]<<endl;
+                                cout<<"Bolivia"<<" le gana a "<<"Chile"<<endl;
                             }
                             if (d==0){
-                                cout<<paises[6]<<" le gana a "<<paises[7]<<endl;
+                                cout<<"Peru"<<" le gana a "<<"Ecuador"<<endl;
                             }
                             else if (d==1){
-                                cout<<paises[6]<<" y "<<paises[7]<<" empatan"<<endl;
+                                cout<<"Peru"<<" y "<<"Ecuador"<<" empatan"<<endl;
                             }
                             else{
-                                cout<<paises[7]<<" le gana a "<<paises[5]<<endl;
+                                cout<<"Ecuador"<<" le gana a "<<"Peru"<<endl;
                             }
                             if (e==0){
-                                cout<<paises[8]<<" le gana a "<<paises[9]<<endl;
+                                cout<<"Argentina"<<" le gana a "<<"Venezuela"<<endl;
                             }
                             else if (e==1){
-                                cout<<paises[8]<<" y "<<paises[9]<<" empatan"<<endl;
+                                cout<<"Argentina"<<" y "<<"Venezuela"<<" empatan"<<endl;
                             }
                             else{
-                                cout<<paises[9]<<" le gana a "<<paises[8]<<endl;
+                                cout<<"Venezuela"<<" le gana a "<<"Argentina"<<endl;
                             }
-                            for(int i=0;i<10;i++){
-                                cout<<i+1<<")  "<< paises[orden[i]] <<"\t"<< puntos[orden[i]]<<endl;
-                            }
+                            //for(int i=0;i<10;i++){
+                            //    cout<<i+1<<")  "<< paises[orden[i]] <<"\t"<< puntos[orden[i]]<<endl;
+                            //}
+                            cout<<"---\n";
                             contador++;
                         }
                     }
