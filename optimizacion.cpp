@@ -44,7 +44,30 @@ int main()
     int orden[]={0,1,2,3,4,5,6,7,8,9};
     bool flag=false;
     int contador=0;
-    string paises[]={"Colombia","Brasil","Paraguay","Uruguay","Chile","Bolivia","Peru","Ecuador","Argentina","Venezuela"};
+    string paises[]={"Colombia","Ecuador","Paraguay","Uruguay","Chile","Bolivia","Peru","Venezuela","Argentina","Brasil"};
+    for(int i=0;i<10;i++){
+        cout << "ingrese puntos de "<< paises[i]<<"\n";
+        cin >> puntos[i];
+        if (i%2==0 && i <9){
+            cout << "ingrese contrincante de "<< paises[i]<<"\n";
+            string aux;
+            cin >>aux;
+            int j=i+1;
+            while (j<=10){
+                if (j==10){
+                    cout << "Error al buscar contrincante\n ingrese contrincante de "<< paises[i]<<" Otra vez\n";
+                    cin >> aux;
+                    j=i+1;
+                }
+                if (paises[j] == aux){
+                    paises[j]=paises[i+1];
+                    paises[i+1]=aux;
+                    j=11;
+                }
+                j++;
+            }
+        }
+    }
     for(int a=0;a<3;a++){
         puntos[0]+=equipoA(a);
         puntos[1]+=equipoB(a);
@@ -79,7 +102,7 @@ int main()
                                 if (i<5){
                                     flag = true;
                                 }
-                                else if(i==5 && puntos[7]==puntos[orden[4]]){
+                                else if(i>=5 && puntos[6]==puntos[orden[4]]){
                                     flag=true;
                                 }
                             }
