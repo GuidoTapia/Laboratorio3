@@ -1,6 +1,6 @@
 #include <iostream>
 
-using namespace std;
+//using namespace std;
 
 int main()
 {
@@ -91,7 +91,7 @@ int main()
                             if (imaximo==6){//
                                 if (i<mejor){
                                     mejor=i;
-                                    cout<<"MEJOR-------------------------------\n";                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                                    std::cout<<"MEJOR-------------------------------\n";                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
                                 }
                                 if (i<5){
                                     flag = true;
@@ -103,54 +103,54 @@ int main()
                         }
                         if (flag==true){ //se imprimen los resultados de los 5 partidos jugados
                             if (a==0){
-                                cout<<"Colombia"<<" le gana a "<<"Brasil"<<endl;
+                                std::cout<<"Colombia"<<" le gana a "<<"Brasil"<<"\n";
                             }
                             else if (a==1){
-                                cout<<"Colombia"<<" y "<<"Brasil"<<" empatan"<<endl;
+                                std::cout<<"Colombia"<<" y "<<"Brasil"<<" empatan"<<"\n";
                             }
                             else{
-                                cout<<"Brasil"<<" le gana a "<<"Colombia"<<endl;
+                                std::cout<<"Brasil"<<" le gana a "<<"Colombia"<<"\n";
                             }
                             if (b==0){
-                                cout<<"Paraguay"<<" le gana a "<<"Uruguay"<<endl;
+                                std::cout<<"Paraguay"<<" le gana a "<<"Uruguay"<<"\n";
                             }
                             else if (b==1){
-                                cout<<"Paraguay"<<" y "<<"Uruguay"<<" empatan"<<endl;
+                                std::cout<<"Paraguay"<<" y "<<"Uruguay"<<" empatan"<<"\n";
                             }
                             else{
-                                cout<<"Uruguay"<<" le gana a "<<"Paraguay"<<endl;
+                                std::cout<<"Uruguay"<<" le gana a "<<"Paraguay"<<"\n";
                             }
                             if (c==0){
-                                cout<<"Chile"<<" le gana a "<<"Bolivia"<<endl;
+                                std::cout<<"Chile"<<" le gana a "<<"Bolivia"<<"\n";
                             }
                             else if (c==1){
-                                cout<<"Chile"<<" y "<<"Bolivia"<<" empatan"<<endl;
+                                std::cout<<"Chile"<<" y "<<"Bolivia"<<" empatan"<<"\n";
                             }
                             else{
-                                cout<<"Bolivia"<<" le gana a "<<"Chile"<<endl;
+                                std::cout<<"Bolivia"<<" le gana a "<<"Chile"<<"\n";
                             }
                             if (d==0){
-                                cout<<"Peru"<<" le gana a "<<"Ecuador"<<endl;
+                                std::cout<<"Peru"<<" le gana a "<<"Ecuador"<<"\n";
                             }
                             else if (d==1){
-                                cout<<"Peru"<<" y "<<"Ecuador"<<" empatan"<<endl;
+                                std::cout<<"Peru"<<" y "<<"Ecuador"<<" empatan"<<"\n";
                             }
                             else{
-                                cout<<"Ecuador"<<" le gana a "<<"Peru"<<endl;
+                                std::cout<<"Ecuador"<<" le gana a "<<"Peru"<<"\n";
                             }
                             if (e==0){
-                                cout<<"Argentina"<<" le gana a "<<"Venezuela"<<endl;
+                                std::cout<<"Argentina"<<" le gana a "<<"Venezuela"<<"\n";
                             }
                             else if (e==1){
-                                cout<<"Argentina"<<" y "<<"Venezuela"<<" empatan"<<endl;
+                                std::cout<<"Argentina"<<" y "<<"Venezuela"<<" empatan"<<"\n";
                             }
                             else{
-                                cout<<"Venezuela"<<" le gana a "<<"Argentina"<<endl;
+                                std::cout<<"Venezuela"<<" le gana a "<<"Argentina"<<"\n";
                             }
                             //for(int i=0;i<10;i++){
-                            //    cout<<i+1<<")  "<< paises[orden[i]] <<"\t"<< puntos[orden[i]]<<endl;
+                            //    cout<<i+1<<")  "<< paises[orden[i]] <<"\t"<< puntos[orden[i]]<<"\n";
                             //}
-                            cout<<"---\n";
+                            std::cout<<"---\n";
                             contador++;
                         }
                     }
@@ -162,7 +162,7 @@ int main()
         }
         puntos[3]-=3;
     }
-    cout<<"Hay "<< contador <<" posibles resultados en los que Peru puede clasificar al mundial 2018\n";//cantidad de posibles resultados en los que Peru tiene posibilidades de clasificar
-    cout<< "Es " <<((float)contador/243)*100 << "% probable que Peru clasifique al mundial"<<endl;//porcentaje de posibilidades que peru tiene de clasificar
+    std::cout<<"Hay "<< contador <<" posibles resultados en los que Peru puede clasificar al mundial 2018\n";//cantidad de posibles resultados en los que Peru tiene posibilidades de clasificar
+    std::cout<< "Es " <<((float)contador/243)*100 << "% probable que Peru clasifique al mundial"<<"\n";//porcentaje de posibilidades que peru tiene de clasificar
     return 0;
 }
