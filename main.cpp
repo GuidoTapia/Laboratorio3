@@ -91,7 +91,7 @@ int main()
                                 if (i<5){
                                     flag = true;
                                 }
-                                else if(i==5 && puntos[7]==puntos[orden[4]]){
+                                else if(i==5 && puntos[6]==puntos[orden[4]]){
                                     flag=true;
                                 }
                             }
