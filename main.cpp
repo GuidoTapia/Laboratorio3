@@ -4,15 +4,15 @@ using namespace std;
 
 int main()
 {
-    int puntos[]={25,36,21,24,23,10,21,20,23,7};
-    int auxiliar[]={0,1,2,3,4,5,6,7,8,9};
-    int maximo= 0;
+    int puntos[]={25,36,21,24,23,10,21,20,23,7};//lista que almacena los puntos obtenidos a la fecha
+    int auxiliar[]={0,1,2,3,4,5,6,7,8,9};//lista auxiliar que almacenara los puntos temporalmente
+    int maximo= 0;//variablles para el algoritmo de ordenamiento
     int imaximo= 0;
-    int orden[]={0,1,2,3,4,5,6,7,8,9};
-    bool flag=false;
-    int contador=0;
+    int orden[]={0,1,2,3,4,5,6,7,8,9};// orden resultante despues del algoritmo de ordenamiento que indica el indice del pais en cada posicion
+    bool flag=false;// booleano cuyo valor true significara que Perú tiene posibilidades de clasificar al mundial
+    int contador=0;// contador que almacenara el total de cantidad de posibles resultados en los que Perú puede clasificar al mundial
     string paises[]={"Colombia","Brasil","Paraguay","Uruguay","Chile","Bolivia","Peru","Ecuador","Argentina","Venezuela"};
-    for(int a=0;a<3;a++){
+    for(int a=0;a<3;a++){//primer partido con tres posibilidades gana A, gana B o empatan
         if (a==0){
             puntos[0]+=3;
         }
@@ -24,7 +24,7 @@ int main()
             puntos[0]--;
             puntos[1]+=2;
         }
-        for(int b=0;b<3;b++){
+        for(int b=0;b<3;b++){//segundo partido con tres posibilidades gana A, gana B o empatan
             if (b==0){
                 puntos[2]+=3;
             }
@@ -36,7 +36,7 @@ int main()
                 puntos[2]--;
                 puntos[3]+=2;
             }
-            for(int c=0;c<3;c++){
+            for(int c=0;c<3;c++){//tercer partido con tres posibilidades gana A, gana B o empatan
                 if (c==0){
                     puntos[4]+=3;
                 }
@@ -48,7 +48,7 @@ int main()
                     puntos[4]--;
                     puntos[5]+=2;
                 }
-                for(int d=0;d<3;d++){
+                for(int d=0;d<3;d++){//cuarto partido con tres posibilidades gana A, gana B o empatan
                     if (d==0){
                         puntos[6]+=3;
                     }
@@ -60,7 +60,7 @@ int main()
                         puntos[6]--;
                         puntos[7]+=2;
                     }
-                    for(int e=0;e<3;e++){
+                    for(int e=0;e<3;e++){//quinto partido con tres posibilidades gana A, gana B o empatan
                         if (e==0){
                             puntos[8]+=3;
                         }
@@ -72,11 +72,11 @@ int main()
                             puntos[8]--;
                             puntos[9]+=2;
                         }
-                        for (int i=0;i<10;i++){
+                        for (int i=0;i<10;i++){//duplicacion de los puntos resultantes en un auxiliar
                             auxiliar[i]=puntos[i];
                         }
                         flag=false;
-                        for(int i=0;i<10;i++){
+                        for(int i=0;i<10;i++){//algoritmo de ordenamiento similar a insertion usando dos listas
                             imaximo=0;
                             maximo=auxiliar[0];
                             for(int j=1;j<10;j++){
@@ -87,7 +87,7 @@ int main()
                             }
                             orden[i]=imaximo;
                             auxiliar[imaximo]=0;
-                            if (imaximo==6){
+                            if (imaximo==6){//
                                 if (i<5){
                                     flag = true;
                                 }
@@ -96,7 +96,7 @@ int main()
                                 }
                             }
                         }
-                        if (flag==true){
+                        if (flag==true){ //se imprimen los resultados de los 5 partidos jugados
                             if (a==0){
                                 cout<<paises[0]<<" le gana a "<<paises[1]<<endl;
                             }
@@ -156,7 +156,7 @@ int main()
         }
         puntos[3]-=3;
     }
-    cout<<"Hay "<< contador <<" posibles resultados en los que Peru puede clasificar al mundial 2018\n";
-    cout<< "Es " <<((float)contador/243)*100 << "% probable que Peru clasifique al mundial"<<endl;
+    cout<<"Hay "<< contador <<" posibles resultados en los que Peru puede clasificar al mundial 2018\n";//cantidad de posibles resultados en los que Peru tiene posibilidades de clasificar
+    cout<< "Es " <<((float)contador/243)*100 << "% probable que Peru clasifique al mundial"<<endl;//porcentaje de posibilidades que peru tiene de clasificar
     return 0;
 }
