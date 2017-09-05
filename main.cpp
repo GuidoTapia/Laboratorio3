@@ -8,6 +8,7 @@ int main()
     int auxiliar[]={0,1,2,3,4,5,6,7,8,9};//lista auxiliar que almacenara los puntos temporalmente
     int maximo= 0;//variablles para el algoritmo de ordenamiento
     int imaximo= 0;
+    int mejor=10;
     int orden[]={0,1,2,3,4,5,6,7,8,9};// orden resultante despues del algoritmo de ordenamiento que indica el indice del pais en cada posicion
     bool flag=false;// booleano cuyo valor true significara que Perú tiene posibilidades de clasificar al mundial
     int contador=0;// contador que almacenara el total de cantidad de posibles resultados en los que Perú puede clasificar al mundial
@@ -88,6 +89,10 @@ int main()
                             orden[i]=imaximo;
                             auxiliar[imaximo]=0;
                             if (imaximo==6){//
+                                if (i<mejor){
+                                    mejor=i;
+                                    cout<<"MEJOR-------------------------------\n";                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                                }
                                 if (i<5){
                                     flag = true;
                                 }
